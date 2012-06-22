@@ -1,8 +1,4 @@
 class CostumesController < ApplicationController
-  def new
-    @costume = Costume.new
-  end
-
   def create
     @costume = Costume.new(params[:costume])
     if @costume.save
@@ -16,5 +12,6 @@ class CostumesController < ApplicationController
 
   def index
     @costumes = Costume.all
+    @costume = Costume.new
   end
 end
