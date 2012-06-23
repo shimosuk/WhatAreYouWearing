@@ -1,0 +1,52 @@
+<div class="top">
+  <%= image_tag '/images/top.png', size: '200x150', alt: 'top' %>
+  <% Costume.top.each do |cos| %>
+    <%= "images/top/#{cos.color}.png" %>
+  <% end %>
+</div>
+
+<div class="bottom">
+  <%= image_tag '/images/bottom.png', size: '200x150', alt: 'bottom' %>
+  <% Costume.bottom.each do |cos| %>
+    <%= "images/bottom/#{cos.color}.png" %>
+  <% end %>
+</div>
+
+<div class="boots">
+  <%= image_tag '/images/boots.png', size: '200x150', alt: 'boots' %>
+  <% Costume.boots.each do |cos| %>
+    <%= "images/boots/#{cos.color}.png" %>
+  <% end %>
+</div>
+
+<h1>WhatAreYouWearing</h1>
+
+<div>
+  <%= form_for @costume do |f| %>
+    <p><%= f.label '型' %></p>
+    <%= f.radio_button :kind, 'top' %>
+    トップス
+    <%= f.radio_button :kind, 'bottom' %>
+    ボトムス
+    <%= f.radio_button :kind, 'boots' %>
+    ひざ下
+
+    <p><%= f.label '色' %></p>
+    <%= f.radio_button :color, 'red' %>
+    赤
+    <%= f.radio_button :color, 'blue' %>
+    青
+    <%= f.radio_button :color, 'yellow' %>
+    黄
+    <%= f.radio_button :color, 'green' %>
+    緑
+    <%= f.radio_button :color, 'black' %>
+    黒
+    <%= f.radio_button :color, 'gray' %>
+    灰
+    <%= f.radio_button :color, 'white' %>
+    白
+
+    <p><%= f.submit '決定' %></p>
+  <% end %>
+</div>
