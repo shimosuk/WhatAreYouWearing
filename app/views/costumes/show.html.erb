@@ -1,2 +1,2 @@
 <% #image_tagにする %>
-<%= "images/#{@costume.kind}_#{@costume.color}.jpeg" %>
+<%= image_tag "/images/#{@costume.kind}_#{@costume.color}.jpg", size: '100%', alt: 'top' %>
