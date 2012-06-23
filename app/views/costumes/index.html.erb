@@ -1,6 +1,23 @@
-<% @costumes.each do |cos| %>
-  <%= "images/#{cos.kind}/#{cos.color}.jpeg" %>
-<% end %>
+<div class="top">
+  <%= image_tag '/images/shirt.png', size: '200x150', alt: 'shirt' %>
+  <% Costume.top.each do |cos| %>
+    <%= "images/top/#{cos.color}.jpeg" %>
+  <% end %>
+</div>
+
+<div class="bottom">
+  <%= image_tag '/images/pants.png', size: '200x150', alt: 'pants' %>
+  <% Costume.top.each do |cos| %>
+    <%= "images/top/#{cos.color}.jpeg" %>
+  <% end %>
+</div>
+
+<div class="boots">
+  <%= image_tag '/images/socks.png', size: '200x150', alt: 'socks' %>
+  <% Costume.top.each do |cos| %>
+    <%= "images/top/#{cos.color}.jpeg" %>
+  <% end %>
+</div>
 
 <h1>WhatAreYouWearing</h1>
 
