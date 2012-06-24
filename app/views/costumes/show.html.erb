@@ -1,3 +1,2 @@
 <% #image_tagにする %>
-<%= link_to "top", "/costumes/" %>
-<%= image_tag "/images/#{@costume.kind}_#{@costume.color}.jpg", size: '100%', alt: 'top' %>
+<%= link_to image_tag("/images/#{@costume.kind}_#{@costume.color}.jpg", size: '100%', alt: 'top'), "/costumes/" %>
