@@ -1,23 +1,37 @@
-<div class="top">
-  <%= image_tag '/images/top.png', size: '200x150', alt: 'top' %>
-  <% Costume.top.each do |cos| %>
-    <%= link_to image_tag("/images/top_#{cos.color}.jpg", size: '100x75', alt: 'top'), "/costumes/#{cos.id}" %>
-  <% end %>
-</div>
+<table>
+  <tr class="top">
+    <th>
+      <%= image_tag '/images/top.png', size: '200x150', alt: 'top' %>
+    </th>
+    <td>
+      <% Costume.top.each do |cos| %>
+        <%= link_to image_tag("/images/top_#{cos.color}.jpg", size: '100x75', alt: 'top'), "/costumes/#{cos.id}" %>
+      <% end %>
+    </td>
+  </tr>
+  <tr class="bottom">
+    <th>
+      <%= image_tag '/images/bottom.png', size: '200x150', alt: 'bottom' %>
+    </th>
+    <td>
+      <% Costume.bottom.each do |cos| %>
+        <%= "images/bottom_#{cos.color}.png" %>
+      <% end %>
+    </td>
+  </tr>
+  <tr class="boots">
+    <th>
+      <%= image_tag '/images/boots.png', size: '200x150', alt: 'boots' %>
+    </th>
+    <td>
+      <% Costume.boots.each do |cos| %>
+        <%= "images/boots_#{cos.color}.png" %>
+      <% end %>
+    </td>
+  </tr>
+</table>
 
-<div class="bottom">
-  <%= image_tag '/images/bottom.png', size: '200x150', alt: 'bottom' %>
-  <% Costume.bottom.each do |cos| %>
-    <%= "images/bottom_#{cos.color}.png" %>
-  <% end %>
-</div>
 
-<div class="boots">
-  <%= image_tag '/images/boots.png', size: '200x150', alt: 'boots' %>
-  <% Costume.boots.each do |cos| %>
-    <%= "images/boots_#{cos.color}.png" %>
-  <% end %>
-</div>
 
 <h1>WhatAreYouWearing</h1>
 
