@@ -5,7 +5,7 @@
     </th>
     <td>
       <% Costume.top.each do |cos| %>
-        <%= link_to image_tag("/images/top_#{cos.color}.jpg", size: '100x75', alt: 'top'), "/costumes/#{cos.id}" %>
+        <%= link_to image_tag("/images/top_#{cos.color}.jpg", size: '100x75', alt: 'top'), cos %>
       <% end %>
     </td>
   </tr>
