@@ -13,4 +13,10 @@ class CostumesController < ApplicationController
   def index
     @costume = Costume.new
   end
+
+  def destroy
+    @costume = Costume.find(params[:id])
+    @costume.destroy
+    redirect_to costumes_url
+  end
 end
