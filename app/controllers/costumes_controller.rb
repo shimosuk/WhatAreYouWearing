@@ -12,6 +12,7 @@ class CostumesController < ApplicationController
 
   def index
     @costume = Costume.new
+    @costumes = Costume.all
   end
 
   def destroy
