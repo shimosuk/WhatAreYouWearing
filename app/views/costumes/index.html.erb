@@ -1,68 +1,46 @@
-<p><%= @costumes.count %>回目★</p>
+<section>
+  <table>
+    <tr class="top">
+      <th>
+        <%= image_tag '/images/top.png', size: '150x112', alt: 'top' %>
+      </th>
+      <td>
+        <% Costume.top.each do |cos| %>
+          <%= link_to image_tag("/images/top_#{cos.color}.jpg", size: '100x75', alt: 'top'), cos %>
+        <% end %>
+      </td>
+    </tr>
 
-<table>
-  <tr class="top">
-    <th>
-      <%= image_tag '/images/top.png', size: '200x150', alt: 'top' %>
-    </th>
-    <td>
-      <% Costume.top.each do |cos| %>
-        <%= link_to image_tag("/images/top_#{cos.color}.jpg", size: '100x75', alt: 'top'), cos %>
-      <% end %>
-    </td>
-  </tr>
-  <tr class="bottom">
-    <th>
-      <%= image_tag '/images/bottom.png', size: '200x150', alt: 'bottom' %>
-    </th>
-    <td>
-      <% Costume.bottom.each do |cos| %>
-        <%= "images/bottom_#{cos.color}.png" %>
-      <% end %>
-    </td>
-  </tr>
-  <tr class="boots">
-    <th>
-      <%= image_tag '/images/boots.png', size: '200x150', alt: 'boots' %>
-    </th>
-    <td>
-      <% Costume.boots.each do |cos| %>
-        <%= "images/boots_#{cos.color}.png" %>
-      <% end %>
-    </td>
-  </tr>
-</table>
+    <tr class="bottom">
+      <th>
+        <%= image_tag '/images/bottom.png', size: '150x112', alt: 'bottom' %>
+      </th>
+      <td>
+        <% Costume.bottom.each do |cos| %>
+          <%= "images/bottom_#{cos.color}.png" %>
+        <% end %>
+      </td>
+    </tr>
 
+    <tr class="boots">
+      <th>
+        <%= image_tag '/images/boots.png', size: '150x112', alt: 'boots' %>
+      </th>
+      <td>
+        <% Costume.boots.each do |cos| %>
+          <%= "images/boots_#{cos.color}.png" %>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+</section>
 
-
-<h1>WhatAreYouWearing</h1>
-
-<div>
-  <%= form_for @costume do |f| %>
-    <p><%= f.label '型' %></p>
-    <%= f.radio_button :kind, 'top' %>
-    トップス
-    <%= f.radio_button :kind, 'bottom' %>
-    ボトムス
-    <%= f.radio_button :kind, 'boots' %>
-    ひざ下
-
-    <p><%= f.label '色' %></p>
-    <%= f.radio_button :color, 'red' %>
-    赤
-    <%= f.radio_button :color, 'blue' %>
-    青
-    <%= f.radio_button :color, 'yellow' %>
-    黄
-    <%= f.radio_button :color, 'green' %>
-    緑
-    <%= f.radio_button :color, 'black' %>
-    黒
-    <%= f.radio_button :color, 'gray' %>
-    灰
-    <%= f.radio_button :color, 'white' %>
-    白
-
-    <p><%= f.submit '決定' %></p>
-  <% end %>
-</div>
+<section>
+  <div class="form">
+    <%= form_for @costume do |f| %>
+      <%= f.select :kind, [['トップス', 'top'], ['ボトムス','bottom'], ['ひざ下','boots']], prompt: 'clothes' %>
+      <%= f.select :color, [['赤', 'red'], ['青','blue'], ['黄','yellow'], ['緑', 'green'], ['黒','black'], ['灰','gray'], ['白', 'white']], prompt: 'color' %>
+      <%= f.submit 'Submit', class: "btn btn-primary submit" %>
+    <% end %>
+  </div>
+</section>
