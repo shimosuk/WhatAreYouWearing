@@ -1,8 +1,12 @@
+# coding: utf-8
 class CostumesController < ApplicationController
   def create
     @costume = Costume.new(params[:costume])
     if @costume.save
       redirect_to @costume
+    else
+      flash[:error] = 'clothesとcolorを選択してください'
+      redirect_to :back
     end
   end
 
@@ -12,7 +16,6 @@ class CostumesController < ApplicationController
 
   def index
     @costume = Costume.new
-    @costumes = Costume.all
   end
 
   def destroy
