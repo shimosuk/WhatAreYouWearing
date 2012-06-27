@@ -35,33 +35,40 @@
 
 
 
-
 <div>
-  <%= form_for @costume do |f| %>
-    <p><%= f.label '型' %></p>
-    <%= f.radio_button :kind, 'top' %>
-    トップス
-    <%= f.radio_button :kind, 'bottom' %>
-    ボトムス
-    <%= f.radio_button :kind, 'boots' %>
-    ひざ下
+  <fieldset>
+    <%= form_for @costume do |f| %>
+      <span class="kind">
+        <%= f.label '型:' %>
+        <%= f.radio_button :kind, 'top' %>
+        トップス
+        <%= f.radio_button :kind, 'bottom' %>
+        ボトムス
+        <%= f.radio_button :kind, 'boots' %>
+        ひざ下
+      </span>
 
-    <p><%= f.label '色' %></p>
-    <%= f.radio_button :color, 'red' %>
-    赤
-    <%= f.radio_button :color, 'blue' %>
-    青
-    <%= f.radio_button :color, 'yellow' %>
-    黄
-    <%= f.radio_button :color, 'green' %>
-    緑
-    <%= f.radio_button :color, 'black' %>
-    黒
-    <%= f.radio_button :color, 'gray' %>
-    灰
-    <%= f.radio_button :color, 'white' %>
-    白
+      <span class="color">
+        <%= f.label '色:' %>
+        <%= f.radio_button :color, 'red' %>
+        赤
+        <%= f.radio_button :color, 'blue' %>
+        青
+        <%= f.radio_button :color, 'yellow' %>
+        黄
+        <%= f.radio_button :color, 'green' %>
+        緑
+        <%= f.radio_button :color, 'black' %>
+        黒
+        <%= f.radio_button :color, 'gray' %>
+        灰
+        <%= f.radio_button :color, 'white' %>
+        白
+      </span>
 
-    <p><%= f.submit '決定' %></p>
-  <% end %>
+      <span class="submit">
+        <%= f.submit '決定' %>
+      </span>
+    <% end %>
+  </fieldset>
 </div>
