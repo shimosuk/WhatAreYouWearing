@@ -32,12 +32,13 @@ section {
 }
 
 .bottom {
-  margin-bottom: 20px;
   display: block;
+  margin-bottom: 20px;
+  padding-left: 0;
 }
 
 table {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .navbar {
@@ -55,7 +56,14 @@ table {
 .form {
   bottom: 0;
   position: fixed;
+  margin-left: 400px;
   .submit {
-    margin-left: 450px;
+    margin-bottom: 10px;
   }
+}
+
+.flash {
+  bottom: 0;
+  position: fixed;
+  margin-bottom: 5px;
 }
