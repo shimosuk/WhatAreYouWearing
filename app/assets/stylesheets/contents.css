@@ -1,0 +1,12 @@
+div.brand {
+  border: solid #F90;
+  -webkit-border-radius: 50px;
+}
+
+div.brand span, div.nth span{
+  color: #F90;
+}
+
+th {
+  width: 200px;
+}
