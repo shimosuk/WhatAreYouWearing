@@ -7,4 +7,5 @@ class Costume < ActiveRecord::Base
   scope :top, where(kind: 'top')
   scope :bottom, where(kind: 'bottom')
   scope :boots, where(kind: 'boots')
+  scope :others, where(kind: 'others')
 end
