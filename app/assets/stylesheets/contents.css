@@ -1,0 +1,29 @@
+body {
+  background-image: url("/images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*opacity:0.8;*/
+}
+
+div.brand {
+  border: solid #F90;
+  -webkit-border-radius: 50px;
+}
+
+div.brand span, div.nth span{
+  color: #F90;
+}
+
+th {
+  width: 200px;
+}
+img {
+	background: #ccc;
+	border: solid 1px #000;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+}
