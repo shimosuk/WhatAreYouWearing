@@ -1,0 +1,32 @@
+th {
+  width: 200px;
+  padding-right: 5px;
+}
+
+img {
+  background: #ccc;
+  border: solid 1px #000;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+}
+
+.top, .boots, .bottom {
+  display: block;
+}
+
+table {
+  margin-bottom: 20px;
+}
+
+.form {
+  bottom: 0;
+  position: fixed;
+  margin-left: 400px;
+  .submit {
+    margin-bottom: 10px;
+  }
+}
