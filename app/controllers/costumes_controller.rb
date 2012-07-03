@@ -23,4 +23,9 @@ class CostumesController < ApplicationController
     @costume.destroy
     redirect_to costumes_url
   end
+
+  def reset
+    Costume.delete_all
+    redirect_to costumes_url
+  end
 end
