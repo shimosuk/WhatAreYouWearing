@@ -1,3 +1,4 @@
-<%= link_to image_tag("/images/#{@costume.kind}_#{@costume.color}.jpg", size: '100%', alt: 'top'), costumes_path %>
+<%= link_to image_tag("/images/#{@costume.kind}_#{@costume.color}.jpg", size: '100%', alt: 'top'), costumes_path unless @costume.other? %>
+<%= link_to image_tag("/images/#{@costume.kind}_#{@costume.other}.jpg", size: '100%', alt: 'top'), costumes_path if @costume.other? %>
 
 <%= link_to 'Destroy', @costume, confirm: '本当に削除しますか？', method: :delete %>

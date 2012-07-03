@@ -5,7 +5,7 @@ class CostumesController < ApplicationController
     if @costume.save
       redirect_to @costume
     else
-      flash[:error] = 'clothesとcolorを選択してください'
+      flash[:error] = '正しく選択してください'
       redirect_to :back
     end
   end
