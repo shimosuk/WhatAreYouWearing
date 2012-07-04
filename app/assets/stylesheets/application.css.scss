@@ -40,7 +40,7 @@ div.brand span a {
   text-decoration: none;
 }
 
-div.nth span a {
+div.nth span {
   color: #F90;
   font-size: 24px;
   display: block;
@@ -89,4 +89,12 @@ h1.title {
 
 .explanation {
   margin-bottom: 20px;
+}
+
+.reset {
+  float: right;
+  margin-top: 10px;
+  a {
+    text-decoration: none;
+  }
 }
