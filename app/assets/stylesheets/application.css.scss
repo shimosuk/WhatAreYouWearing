@@ -37,17 +37,56 @@ div.brand span a {
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
+  text-decoration: none;
 }
 
-div.nth span {
+div.nth span a {
   color: #F90;
   font-size: 24px;
   display: block;
   margin-top: 10px;
+  text-decoration: none;
 }
 
 .flash {
   bottom: 0;
   position: fixed;
   margin-bottom: 5px;
+}
+
+.rule {
+  font-size: 16px;
+  line-height: 1.5;
+  border: solid #fff;
+  background-color: #fff;
+  padding: 25px;
+  margin-top: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+}
+
+.hint {
+  border: solid rgb(243, 243, 243);
+  background-color: rgb(243, 243, 243);
+  padding: 25px;
+  margin-top: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-box-shadow: 0 1px 3px rgba(243, 243, 243, .4);
+  -moz-box-shadow: 0 1px 3px rgba(243, 243, 243, .4);
+  box-shadow: 0 1px 3px rgba(243, 243, 243, .4);
+}
+
+h1.title {
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.explanation {
+  margin-bottom: 20px;
 }
