@@ -1,9 +1,7 @@
 class Costume < ActiveRecord::Base
   attr_accessible :other, :color, :kind
 
-  validates :kind, presence: true, length: {minimum: 1}
-  validates :color, presence: true, length: {minimum: 1}, unless: :other?
-  validates :other, presence: true, length: {minimum: 1}, if: :other?
+  before_save :others, if: :kind_is_not_chosen
 
   scope :top, where(kind: 'top')
   scope :bottom, where(kind: 'bottom')
@@ -12,5 +10,13 @@ class Costume < ActiveRecord::Base
 
   def other?
     kind == 'others'
+  end
+
+  def others
+    self.kind = 'others'
+  end
+
+  def kind_is_not_chosen
+    kind == ''
   end
 end
