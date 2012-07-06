@@ -1,11 +1,12 @@
 th {
   width: 200px;
-  padding-right: 5px;
+  padding: 10px;
 }
 
-img {
-  background: #ccc;
-  border: solid 1px #000;
+table {
+  background: #FFF;
+  width: 960px;
+  opacity: .88;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -16,6 +17,19 @@ img {
 
 table {
   margin-bottom: 20px;
+}
+
+.original {
+  img {
+    opacity: .8;
+    background-color: #FFF;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+  }
 }
 
 .form {
