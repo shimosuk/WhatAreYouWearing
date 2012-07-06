@@ -3,6 +3,7 @@ class Costume < ActiveRecord::Base
 
   validates :kind, presence: true, length: {minimum: 1}, if: :clothers?
   validates :color, presence: true, length: {minimum: 1}, unless: :other?
+  validates :other, presence: true, length: {minimum: 1}, unless: :clothers?
   before_save :others, if: :kind_and_color_is_not_chosen
 
   scope :top, where(kind: 'top')
