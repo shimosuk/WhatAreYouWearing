@@ -50,7 +50,7 @@
   <div class="form">
     <%= form_for @costume do |f| %>
       <%= f.select :kind, [['トップス', 'top'], ['ボトムス','bottom'], ['ひざ下','boots'], ['その他','others']], prompt: 'clothes' %>
-      <%= f.select :color, [['赤', 'red'], ['青','blue'], ['黄','yellow'], ['緑', 'green'], ['黒','black'], ['灰','gray'], ['白', 'white']], prompt: 'color' %>
+      <%= f.select :color, [['赤', 'red'], ['茶', 'brown'], ['青','blue'], ['黄','yellow'], ['緑', 'green'], ['黒','black'], ['灰','gray'], ['白', 'white'], ['アロハ', 'aloha'], ['沖縄', 'okinawa']], prompt: 'color' %>
       <%= f.select :other, [['時計', 'watch'], ['指輪','ring'], ['イヤリング','earrings'], ['スマフォ', 'phone'], ['メガネ','glasses']], prompt: 'others' %>
       <%= f.submit 'Submit', class: "btn btn-primary submit" %>
     <% end %>
