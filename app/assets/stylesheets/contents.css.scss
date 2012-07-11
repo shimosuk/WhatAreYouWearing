@@ -13,6 +13,9 @@ table {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
   box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+  img {
+    border-radius: 50px;
+  }
 }
 
 table {
@@ -37,5 +40,13 @@ table {
   margin-left: 400px;
   .submit {
     margin-bottom: 10px;
+  }
+}
+
+.rule {
+  li {
+    padding-bottom: 40px;
+    line-height: 50px;
+    font-size: 25px;
   }
 }
